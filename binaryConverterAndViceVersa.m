@@ -1,9 +1,14 @@
 %Read Readme.md for help
+%Any work should be done in WORK section as mentioned in code segment. The 
+%processed bits must satisfy the file format in which it is being saved. 
+%If no WORK is done, this program takes a file, convert to unsigned 8-bit 
+%data and then converts to binary(0 and 1) array, then it takes the binary 
+%array converts to unsigned 8-bit data and save the file in original format 
+%to obtain a COPY of the file.
 %-------------------------------------------------------------------------
-%clear all;
+clear all;
 close all;
-%displaying the initial image
-%figure, imshow('C:\Users\Divyanshu kumar\Desktop\tenet.jpg');
+
 %opening the file to read as 8-bit data
 fid = fopen('C:\Users\Divyanshu kumar\Desktop\tenet.jpg');
 bytes = fread(fid, inf, 'ubit8', 'b');
@@ -37,5 +42,3 @@ end;
 fileID = fopen('C:\Users\Divyanshu kumar\Desktop\tenet2.jpg','w');
 fwrite(fileID,recieved_bytes,'ubit8');
 fclose(fileID);
-%displaying obtained image
-%figure, imshow('C:\Users\Divyanshu kumar\Desktop\tenet2.jpg')
