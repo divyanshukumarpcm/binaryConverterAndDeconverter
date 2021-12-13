@@ -34,7 +34,7 @@ for i=1:size(recieved_bytes)
 end;
 
 %saving to file
-fileID = fopen('C:\Users\Divyanshu kumar\Desktop\tenet2.jpg','wb');
+fileID = fopen('C:\Users\Divyanshu kumar\Desktop\tenet2.jpg','w');
 fwrite(fileID,recieved_bytes,'ubit8');
 fclose(fileID);
 %displaying obtained image
